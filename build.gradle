@@ -8,12 +8,11 @@ group 'ru.netology'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 11
-
-//
 compileJava.options.encoding = "UTF-8"
 compileTestJava.options.encoding = "UTF-8"
 
 allure {
+
     version = '2.16.1'
     useJUnit5 {
         version = '2.16.1'
@@ -36,11 +35,13 @@ dependencies {
     testImplementation 'mysql:mysql-connector-java:8.0.30'
     testImplementation 'commons-dbutils:commons-dbutils:1.7'
 
-
-
 }
 
 test {
     useJUnitPlatform()
     systemProperty 'selenide.headless', System.getProperty('selenide.headless')
+
+
 }
+
+
